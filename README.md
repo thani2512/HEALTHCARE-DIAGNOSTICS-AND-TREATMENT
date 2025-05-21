@@ -70,7 +70,7 @@ Real-Time Monitoring and Diagnostics
 IoT devices such as wearable sensors and diagnostic tools continuously collect and transmit patient data (e.g., heart rate, blood pressure) to cloud platforms, enabling healthcare providers to monitor and diagnose conditions in real-time.
 1.Encryption and Secure Communication
 Patient data is protected during transmission using TLS/SSL encryption and securely stored with AES encryption to prevent unauthorized access.
-----------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
 CHALLENGES AND SOLUTION:
 1. Model Accuracy in Healthcare AI
 i) Challenge: Achieving and maintaining high accuracy in AI/ML models for diagnosis and treatment due to data scarcity/bias, biological complexity, data quality, lack of interpretability, and the dynamic nature of healthcare.
@@ -81,13 +81,13 @@ ii) Solution: Focus on human-centered design, seamless integration, intelligent 
 3. IoT Device Availability and Reliability in Healthcare
 i) Challenge: Ensuring consistent availability and reliability of IoT devices due to connectivity issues, device malfunction, security vulnerabilities, scalability/management complexity, and power management.
 ii) Solution: Implement robust/redundant connectivity, device health monitoring, strong security measures, centralized device management, low-power design/alternative power sources, and promote standardization/interoperability.
--------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
 1.Basic AI Model: Providing clinically relevant initial insights. 
 2.Functional Chatbot Interface: Delivering accurate and safe medical information. 
 3.IoT Device Implementation: Achieving seamless integration of diverse devices. 
 4.Data Security: Protecting the confidentiality and integrity of patient data. 
 5.Testing and Feedback Collection: Validating clinical utility and usability in practice.
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 PHASE 4 OVERVIEW:
 ⮚	Real-Time Data Processing and Analytics
 Enables instant analysis of vital signs and health metrics for early diagnosis and intervention.
@@ -107,7 +107,7 @@ Enhances coordinated care through unified patient records and device synchroniza
 3. IoT Device Compatibility
 ⮚	Challenge: IoT devices in healthcare often lack standardization, causing integration issues between different platforms and devices.
 ⮚	Solution: Using open standards like FHIR, middleware platforms, and APIs ensures seamless integration and communication across various IoT devices and healthcare systems
-----------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
 Outcomes of phase 4
 1.Improved AI Accuracy
         AI delivers higher diagnostic precision, reducing misdiagnoses and unnecessary tests.
@@ -121,4 +121,4 @@ Outcomes of phase 4
 4. Strengthened Data Security
          Patient data is fully encrypted, preventing breaches and ensuring compliance.
          Fast threat detection and access control build trust and protect records
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
