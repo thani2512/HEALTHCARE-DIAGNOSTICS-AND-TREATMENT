@@ -105,14 +105,14 @@ Patient data is protected during transmission using TLS/SSL encryption and secur
 ----------------------------------------------------------------------------------------------------------------------------
 CHALLENGES AND SOLUTION:
 1. Model Accuracy in Healthcare AI
-i. Challenge: Achieving and maintaining high accuracy in AI/ML models for diagnosis and treatment due to data scarcity/bias, biological complexity, data quality, lack of interpretability, and the dynamic nature of healthcare.
-ii. Solution: Employ federated learning, synthetic data generation, Explainable AI (XAI), continuous monitoring and retraining, multi-modal data integration, and rigorous validation.
+i) Challenge: Achieving and maintaining high accuracy in AI/ML models for diagnosis and treatment due to data scarcity/bias, biological complexity, data quality, lack of interpretability, and the dynamic nature of healthcare.
+ii) Solution: Employ federated learning, synthetic data generation, Explainable AI (XAI), continuous monitoring and retraining, multi-modal data integration, and rigorous validation.
 2. User Experience for Healthcare Professionals and Patients
-i. Challenge: Poor user experience with healthcare technology due to complex interfaces, lack of integration, alert fatigue, accessibility issues, and a lack of patient-centric design.
-ii. Solution: Focus on human-centered design, seamless integration, intelligent alert management, accessibility considerations, personalized experiences, and thorough training and support.
+i) Challenge: Poor user experience with healthcare technology due to complex interfaces, lack of integration, alert fatigue, accessibility issues, and a lack of patient-centric design.
+ii) Solution: Focus on human-centered design, seamless integration, intelligent alert management, accessibility considerations, personalized experiences, and thorough training and support.
 3. IoT Device Availability and Reliability in Healthcare
-i. Challenge: Ensuring consistent availability and reliability of IoT devices due to connectivity issues, device malfunction, security vulnerabilities, scalability/management complexity, and power management.
-ii. Solution: Implement robust/redundant connectivity, device health monitoring, strong security measures, centralized device management, low-power design/alternative power sources, and promote standardization/interoperability.
+i) Challenge: Ensuring consistent availability and reliability of IoT devices due to connectivity issues, device malfunction, security vulnerabilities, scalability/management complexity, and power management.
+ii) Solution: Implement robust/redundant connectivity, device health monitoring, strong security measures, centralized device management, low-power design/alternative power sources, and promote standardization/interoperability.
 -------------------------------------------------------------------------------------------------------------------
 1.Basic AI Model: Providing clinically relevant initial insights. 
 2.Functional Chatbot Interface: Delivering accurate and safe medical information. 
@@ -127,15 +127,19 @@ Supports predictive modeling for chronic disease management and emergency alerts
 ⮚	Interoperability and System Integration
 Ensures seamless data exchange between IoT devices, EHR systems, and clinical platforms.
 Enhances coordinated care through unified patient records and device synchronization.
+
 1.Scaling the System
 ⮚	Challenge: As healthcare systems expand, managing increased data and user demands can lead to performance degradation and system failures.
 ⮚	Solution: Cloud-based solutions, microservices, and containerization (e.g., Kubernetes) help scale infrastructure, allowing healthcare systems to handle growth without compromising performance.
+
 2. Security Under Load
 ⮚	Challenge: During high traffic periods, maintaining security becomes difficult, leaving systems vulnerable to breaches or DDoS attacks.
 ⮚	Solution: Load balancing, real-time monitoring, encryption, and implementing DDoS protection help maintain security even under heavy system load.
+
 3. IoT Device Compatibility
 ⮚	Challenge: IoT devices in healthcare often lack standardization, causing integration issues between different platforms and devices.
 ⮚	Solution: Using open standards like FHIR, middleware platforms, and APIs ensures seamless integration and communication across various IoT devices and healthcare systems
+----------------------------------------------------------------------------------------------------------------------------
 Outcomes of phase 4
 1.Improved AI Accuracy
         AI delivers higher diagnostic precision, reducing misdiagnoses and unnecessary tests.
