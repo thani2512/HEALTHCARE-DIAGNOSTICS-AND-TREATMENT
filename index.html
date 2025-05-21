@@ -1,0 +1,164 @@
+a.	Source code for phase 3
+       
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Healthcare Diagnostics and Treatment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 500px;
+      margin: 40px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    input[type="checkbox"] {
+      width: auto;
+      margin-right: 10px;
+    }
+    label {
+      margin-top: 10px;
+      display: block;
+      font-weight: bold;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Login Page -->
+<div class="container" id="loginPage">
+  <h2>Login</h2>
+  <input type="text" id="username" placeholder="Username" required />
+  <input type="password" id="password" placeholder="Password" required />
+  <button onclick="login()">Login</button>
+</div>
+
+<!-- Patient Details Page -->
+<div class="container hidden" id="formPage">
+  <h2>Patient Details</h2>
+  <input type="text" id="name" placeholder="Full Name" />
+  <input type="number" id="age" placeholder="Age" />
+  
+  <label for="gender">Gender</label>
+  <select id="gender">
+    <option value="">Select Gender</option>
+    <option>Male</option>
+    <option>Female</option>
+    <option>Other</option>
+  </select>
+
+  <label for="heartDisease">Type of Heart Disease</label>
+  <select id="heartDisease">
+    <option value="">Select Heart Disease</option>
+    <option>Coronary Artery Disease</option>
+    <option>Heart Failure</option>
+    <option>Arrhythmia</option>
+    <option>Valvular Heart Disease</option>
+  </select>
+
+  <label for="disease">Type of Disease</label>
+  <select id="disease">
+    <option value="">Select Disease Type</option>
+    <option>Diabetes</option>
+    <option>Hypertension</option>
+    <option>Obesity</option>
+    <option>None</option>
+  </select>
+
+  <label>Symptoms (select all that apply):</label>
+  <input type="checkbox" name="symptoms" value="Chest Pain" /> Chest Pain<br/>
+  <input type="checkbox" name="symptoms" value="Fatigue" /> Fatigue<br/>
+  <input type="checkbox" name="symptoms" value="Shortness of Breath" /> Shortness of Breath<br/>
+  <input type="checkbox" name="symptoms" value="Swelling" /> Swelling<br/>
+  <input type="checkbox" name="symptoms" value="Irregular Heartbeat" /> Irregular Heartbeat<br/>
+
+  <input type="text" id="bp" placeholder="Blood Pressure (e.g., 120/80)" />
+  <input type="text" id="cholesterol" placeholder="Cholesterol Level (mg/dL)" />
+  <button onclick="submitDetails()">Submit</button>
+</div>
+
+<!-- Summary Page -->
+<div class="container hidden" id="summaryPage">
+  <h2>Patient Summary</h2>
+  <div id="summary"></div>
+</div>
+
+<script>
+  function login() {
+    const user = document.getElementById("username").value;
+    const pass = document.getElementById("password").value;
+    if (user === "admin" && pass === "1234") {
+      document.getElementById("loginPage").classList.add("hidden");
+      document.getElementById("formPage").classList.remove("hidden");
+    } else {
+      alert("Invalid credentials! Try username: admin and password: 1234");
+    }
+  }
+
+  function submitDetails() {
+    const selectedSymptoms = Array.from(document.querySelectorAll('input[name="symptoms"]:checked'))
+      .map(cb => cb.value)
+      .join(", ");
+
+    const data = {
+      name: document.getElementById("name").value,
+      age: document.getElementById("age").value,
+      gender: document.getElementById("gender").value,
+      heartDisease: document.getElementById("heartDisease").value,
+      disease: document.getElementById("disease").value,
+      symptoms: selectedSymptoms,
+      bp: document.getElementById("bp").value,
+      cholesterol: document.getElementById("cholesterol").value,
+    };
+
+    let summaryHTML = `
+      <p><strong>Name:</strong> ${data.name}</p>
+      <p><strong>Age:</strong> ${data.age}</p>
+      <p><strong>Gender:</strong> ${data.gender}</p>
+      <p><strong>Heart Disease:</strong> ${data.heartDisease}</p>
+      <p><strong>Disease Type:</strong> ${data.disease}</p>
+      <p><strong>Symptoms:</strong> ${data.symptoms}</p>
+      <p><strong>Blood Pressure:</strong> ${data.bp}</p>
+      <p><strong>Cholesterol:</strong> ${data.cholesterol}</p>
+    `;
+
+    document.getElementById("summary").innerHTML = summaryHTML;
+    document.getElementById("formPage").classList.add("hidden");
+    document.getElementById("summaryPage").classList.remove("hidden");
+  }
+</script>
+
+</body>
+</html>
